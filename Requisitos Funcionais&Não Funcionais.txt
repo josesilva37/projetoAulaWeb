@@ -4,6 +4,8 @@ Permitir acesso a informação sobre a conference;
 Permitir resgisto de um user na conference;
 Permitir administrador a realizar a gestão de speakers e sponsors;
 Permitir ao user conseguir realizar update de informação;
+Permitir ao user criar conta e realizar login;
+
 
 Non-functional Requirements:
 
