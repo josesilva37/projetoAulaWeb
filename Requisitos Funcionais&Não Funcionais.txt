@@ -1,0 +1,11 @@
+Functional Requirements:
+
+Permitir acesso a informação sobre a conference;
+Permitir resgisto de um user na conference;
+Permitir administrador a realizar a gestão de speakers e sponsors;
+Permitir ao user conseguir realizar update de informação;
+
+Non-functional Requirements:
+
+Database protegida contra acesso não autorizado
+Aplicação deve trabalhar bem em main browsers
