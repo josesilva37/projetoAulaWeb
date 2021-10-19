@@ -17,7 +17,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('conference', function ($id) {
-    
+Route::get('/conference', function () {
+    return view('conf');
 });
-
