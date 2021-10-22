@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="topnav.css">
 </head>
 <body>
-<<<<<<< HEAD
     <nav class="topnav">
         <div>
             
@@ -31,14 +30,12 @@
             <div class="menu-line"></div>
         </div>
     </nav>        
-=======
     <div class="topnav">
         <a class="active" href="#home">Home</a>
         <a href="#conferenceInfo">Conference</a>
         <a href="#accountInfo">Account</a>
     </div>
      
->>>>>>> 025a2be98007822833a7e92a6d8ba111a6155e64
 </body>
 <script>
     const toggleButton = document.getElementById('toggleButton');
