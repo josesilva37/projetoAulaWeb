@@ -17,6 +17,13 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/conference', function () {
-    return view('conf');
+Route::get('/palestras/{conf}', function ($slug) {
+    $path = __DIR__ . "/../resources/palestras/{$slug}.html";
+    if( ! file_exists($path)){
+        abort(404);
+    }
+    $conf = file_get_contents($path);
+    
+
+    return view('conf', ['conf' => $conf ]);
 });
