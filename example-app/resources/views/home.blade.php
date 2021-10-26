@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../css/topnav.css">
+    <link rel="stylesheet" href="../css/menu.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,7 @@
     <link rel="stylesheet" href="topnav.css">
 </head>
 <body>
-    <nav class="topnav">
+    <!-- <nav class="topnav">
         <div>
             
         </div>
@@ -34,8 +35,24 @@
         <a class="active" href="#home">Home</a>
         <a href="#conferenceInfo">Conference</a>
         <a href="#accountInfo">Account</a>
-    </div>
+    </div> -->
      
+
+    <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Info</li></a>
+            <a href="#"><li>Contact</li></a>
+            <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+          </ul>
+        </div>
+      </nav>
 </body>
 <script>
     const toggleButton = document.getElementById('toggleButton');
