@@ -14,8 +14,8 @@ class CreateConfPartificantTable extends Migration
     public function up()
     {
         Schema::create('conf_partificant', function (Blueprint $table) {
-            $table->intiger('conferenceID');
-            $table->intiger('participantID');
+            $table->integer('conferenceID');
+            $table->integer('participantID');
             $table->timestamp('registrationDate');
         });
     }

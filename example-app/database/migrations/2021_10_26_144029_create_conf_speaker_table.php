@@ -14,8 +14,8 @@ class CreateConfSpeakerTable extends Migration
     public function up()
     {
         Schema::create('conf_speaker', function (Blueprint $table) {
-            $table->intiger('conferenceID');
-            $table->intiger('speakerID');
+            $table->integer('conferenceID');
+            $table->integer('speakerID');
         });
     }
 

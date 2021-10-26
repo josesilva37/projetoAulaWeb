@@ -14,8 +14,8 @@ class CreateConfSponserTable extends Migration
     public function up()
     {
         Schema::create('conf_sponser', function (Blueprint $table) {
-            $table->intiger('conferenceID');
-            $table->intiger('sponsorID');
+            $table->integer('conferenceID');
+            $table->integer('sponsorID');
         });
     }
 
