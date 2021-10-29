@@ -10,9 +10,9 @@
 <body>
     <div class="topnav">
         <a class="active" href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+        <a href="#news">Conferências</a>
+        <a href="#contact">Contactos</a>
+        <a href="#about">Sobre</a>
       </div>
 </body>
 </html>
