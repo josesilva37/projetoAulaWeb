@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="topnav">
-        <a class="active" href="#home">Home</a>
+        <a class="active" href="/">Home</a>
         <a href="#news">Conferências</a>
         <a href="#contact">Contactos</a>
         <a href="#about">Sobre</a>
