@@ -5,23 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Aula Web</title>
-    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/topbar.css">
 </head>
 <body>
-    <nav role="navigation">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu">
-            <a href="#"><li>Home</li></a>
-            <a href="#"><li>About</li></a>
-            <a href="#"><li>Info</li></a>
-            <a href="#"><li>Contact</li></a>
-            <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
-          </ul>
-        </div>
-      </nav>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
 </body>
 </html>
