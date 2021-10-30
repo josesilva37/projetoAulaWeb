@@ -19,6 +19,8 @@ class CreateConferencesTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('local');
+            $table->timestamp('updated_at');
+            $table->timestamp('created_at');
             $table->timestamp('conferenceDate');
         });
     }
