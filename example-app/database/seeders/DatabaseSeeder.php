@@ -5,6 +5,9 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+use Faker\Generator as Faker;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,34 +18,35 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
         // \App\Models\User::factory(10)->create();
         DB::table('conferences')->insert([
-            'acronym' => String::random(3),
-            'name' => String::random(10),
-            'description' => String::random(20),
-            'local' => String::random(20),
+            'acronym' => Str::random(3),
+            'name' => Str::random(10),
+            'description' => Str::random(20),
+            'local' => Str::random(20),
+            'updated_at' => now(),
+            'created_at' => now(),
+            'conferenceDate' => now(),
+            //'conferenceData' => now()
         ]);
 
         DB::table('speakers')->insert([
-            'name'  => String::random(10),
-            'affiliation' => String::random(10),
-            'biography' => String::random(30),
-            'speakerType' => String::random(10),
-            'socialNetworks' => String::random(10),
-            'pageLink' => String::random(10)
+            'name'  => Str::random(10),
+            'affiliation' => Str::random(10),
+            'biography' => Str::random(30),
+            'speakerType' => Str::random(10),
+            'socialNetworks' => Str::random(10),
+            'pageLink' => Str::random(10)
         ]);
 
         DB::table('sponsors')->insert([
-            'name' => String::random(10),
-            'category' => String::random(10),
+            'name' => Str::random(10),
+            'category' => Str::random(10),
         ]);
 
         DB::table('speakar_type')->insert([
-            'description' => String::random(20)
-        ]);
-
-        DB::table('user_type')->insert([
-            'description' => String::random(20)
+            'description' => Str::random(20)
         ]);
 
         DB::table('conf_partificant')->insert([
@@ -54,15 +58,15 @@ class DatabaseSeeder extends Seeder
             'conferenceID' => Int::random(6),
             'speakerID' => Int::random(6)
         ]);
-        
+
         DB::table('conf_sponser')->insert([
             'conferenceID' => Int::random(6),
             'speakerID' => Int::random(6)
         ]);
 
         DB::table('users')->insert([
-            'name' => String::random(10),
-            'email' => String::random(10).'@gmail.com',
+            'name' => Str::random(10),
+            'email' => Str::random(10).'@gmail.com',
             'password' =>  Hash::make('password')
 
         ]);
