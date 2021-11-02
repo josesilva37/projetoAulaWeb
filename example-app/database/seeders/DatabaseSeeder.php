@@ -16,13 +16,13 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
 
-        // \App\Models\User::factory(10)->create();
+        // \App\Models\User::factory(10)->cInt::random(6)reate();
         DB::table('conferences')->insert([
             'acronym' => Str::random(3),
-            'name' => Str::random(10),
+            'name' =>$faker->name(),
             'description' => Str::random(20),
             'local' => Str::random(20),
             'updated_at' => now(),
@@ -48,20 +48,6 @@ class DatabaseSeeder extends Seeder
             'description' => Str::random(20)
         ]);
 
-        DB::table('conf_partificant')->insert([
-            'conferenceID' => Int::random(6),
-            'participantID' => Int::random(6),
-        ]);
-
-        DB::table('conf_speaker')->insert([
-            'conferenceID' => Int::random(6),
-            'speakerID' => Int::random(6)
-        ]);
-
-        DB::table('conf_sponser')->insert([
-            'conferenceID' => Int::random(6),
-            'speakerID' => Int::random(6)
-        ]);
 
         DB::table('users')->insert([
             'name' => Str::random(10),
