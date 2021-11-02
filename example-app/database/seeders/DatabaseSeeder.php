@@ -28,7 +28,6 @@ class DatabaseSeeder extends Seeder
             'updated_at' => now(),
             'created_at' => now(),
             'conferenceDate' => now(),
-            //'conferenceData' => now()
         ]);
 
         DB::table('speakers')->insert([
