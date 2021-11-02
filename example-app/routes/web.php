@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Conference;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +23,7 @@ Route::get('/palestras/{conf}', function ($slug) {
         abort(404);
     }
     $conf = file_get_contents($path);
+    
 
-    ddd(Conference::all());
-    return view('conf');
+    return view('conf', ['conf' => $conf ]);
 });
