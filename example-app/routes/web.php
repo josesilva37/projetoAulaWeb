@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Conference;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $confs = Conference::all();
+
+    return View::make('home')->with('confs', $confs);
 });
 
 Route::get('/palestras/{conf}', function ($slug) {
@@ -27,3 +31,4 @@ Route::get('/palestras/{conf}', function ($slug) {
 
     return view('conf', ['conf' => $conf ]);
 });
+

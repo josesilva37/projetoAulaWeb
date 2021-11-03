@@ -14,5 +14,8 @@
         <a href="#contact">Contactos</a>
         <a href="#about">Sobre</a>
       </div>
+      @foreach ($confs as $conf)
+      <h1>{{$conf->name}}</h1>
+      @endforeach
 </body>
 </html>
