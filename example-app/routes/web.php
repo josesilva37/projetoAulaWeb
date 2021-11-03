@@ -21,14 +21,16 @@ Route::get('/', function () {
     return View::make('home')->with('confs', $confs);
 });
 
-Route::get('/palestras/{conf}', function ($slug) {
-    $path = __DIR__ . "/../resources/palestras/{$slug}.html";
-    if( ! file_exists($path)){
-        abort(404);
-    }
-    $conf = file_get_contents($path);
+Route::get('/palestras/{conf}', function ($name) {
+    // $path = __DIR__ . "/../resources/palestras/{$slug}.html";
+    // if( ! file_exists($path)){
+    //     abort(404);
+    // }
+    // $conf = file_get_contents($path);
 
+    $conf = Conference::where('name' , $name);
+   // dd($conf);
 
-    return view('conf', ['conf' => $conf ]);
+    return view('conf', ['confe' => $conf]);
 });
 
