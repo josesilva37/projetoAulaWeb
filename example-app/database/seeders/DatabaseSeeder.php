@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         DB::table('conferences')->insert([
             'acronym' => Str::random(3),
             'name' =>$faker->name(),
-            'description' => Str::random(20),
+            'description' => $faker->realText(30),
             'local' => Str::random(20),
             'updated_at' => now(),
             'created_at' => now(),
