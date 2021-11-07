@@ -28,11 +28,11 @@ Route::get('/palestras/{id}', function ($id) {
     // }
     // $conf = file_get_contents($path);
 
-    $conf = Conference::where('id', $id);
+    $conf = Conference::where('id', $id)->first();
    // dd($conf);
-
     return view('conf', ['confe' => $conf]);
 });
+
 Route::get('/writepost', function () {
     return view('writepost');
 });
