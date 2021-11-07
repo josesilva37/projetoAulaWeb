@@ -21,13 +21,17 @@
             </div>
             <nav class="tm-nav" id="tm-nav">
                 <ul>
-                    <li class="tm-nav-item active"><a href="index.html" class="tm-nav-link">
+                    <li class="tm-nav-item active"><a href="/" class="tm-nav-link">
                         <i class="fas fa-home"></i>
                         Blog Home
                     </a></li>
                     <li class="tm-nav-item"><a href="/writepost" class="tm-nav-link">
                         <i class="fas fa-pen"></i>
                         Write Post
+                    </a></li>
+                    <li class="tm-nav-item"><a href="/profile" class="tm-nav-link">
+                        <i class="fas fa-user"></i>
+                        Profile
                     </a></li>
                 </ul>
             </nav>
@@ -48,11 +52,13 @@
             </div>
             <div class="row tm-row">
                 <article>
-					<h1>Name : {{$confe->name}}</h1>
-					<h1>Acronym : {{$confe->acronym}}</h1>
-					<h1>Description : {{$confe->description}}</h1>
-					<h1>Local : {{$confe->local}}</h1>
-					<h1>Date : {{$confe->conferenceDate}}</h1>
+					<h1 style="color: #0cc">{{$confe->name}} ( {{$confe->acronym}} )</h1>
+                    <br>
+					<h3>{{$confe->description}}</h3>
+                    <hr>
+					<h3><i class="fas fa-map-marker-alt" style="color: #0cc"></i> {{$confe->local}}</h3>
+                    <hr>
+					<h3><i class="fas fa-calendar-day" style="color: #0cc"></i> {{$confe->conferenceDate}}</h3>
 				</article>
             </div>
             <div class="row tm-row tm-mt-100 tm-mb-75">

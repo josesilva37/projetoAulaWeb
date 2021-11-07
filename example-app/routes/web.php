@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Conference;
-
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,5 +35,11 @@ Route::get('/palestras/{id}', function ($id) {
 
 Route::get('/writepost', function () {
     return view('writepost');
+});
+
+Route::get('/profile', function () {
+
+    $user = User::where('id', 1)->first();
+    return view('profile', ['user' => $user]);
 });
 

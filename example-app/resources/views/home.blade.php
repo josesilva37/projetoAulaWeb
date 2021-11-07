@@ -27,13 +27,17 @@
             </div>
             <nav class="tm-nav" id="tm-nav">
                 <ul>
-                    <li class="tm-nav-item active"><a href="index.html" class="tm-nav-link">
+                    <li class="tm-nav-item active"><a href="/" class="tm-nav-link">
                         <i class="fas fa-home"></i>
                         Blog Home
                     </a></li>
                     <li class="tm-nav-item"><a href="/writepost" class="tm-nav-link">
                         <i class="fas fa-pen"></i>
                         Write Post
+                    </a></li>
+                    <li class="tm-nav-item"><a href="/profile" class="tm-nav-link">
+                        <i class="fas fa-user"></i>
+                        Profile
                     </a></li>
                 </ul>
             </nav>
