@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Conference;
 use App\Models\User;
+use App\Http\Controllers\ControllerSponsor;
+use App\Models\Sponsor;
+use GuzzleHttp\Promise\Create;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,4 +45,12 @@ Route::get('/profile', function () {
     $user = User::where('id', 1)->first();
     return view('profile', ['user' => $user]);
 });
+
+Route::get('/sponsor', function () {
+    $spon = Sponsor::all();
+
+    return View::make('sponsor')->with('spons', $spon);
+});
+
+Route::get('/createSponsor', [ControllerSponsor::class, 'create']);
 

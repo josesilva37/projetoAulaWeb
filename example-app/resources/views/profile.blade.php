@@ -25,6 +25,10 @@
                         <i class="fas fa-home"></i>
                         Blog Home
                     </a></li>
+                    <li class="tm-nav-item"><a href="/sponsor" class="tm-nav-link">
+                        <i class="fab fa-stripe-s"></i>
+                        Sponsor
+                    </a></li>
                     <li class="tm-nav-item"><a href="/writepost" class="tm-nav-link">
                         <i class="fas fa-pen"></i>
                         Write Post

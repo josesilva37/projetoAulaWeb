@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/templatemo-xtra-blog.css') }}" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Conference</title>
-	<link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}"> <!-- https://fontawesome.com/ -->
+	<title>Conferences Hub</title>
+	<link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-xtra-blog.css" rel="stylesheet">
+
 </head>
 <body>
 	<header class="tm-header" id="tm-header">
@@ -21,11 +22,11 @@
             </div>
             <nav class="tm-nav" id="tm-nav">
                 <ul>
-                    <li class="tm-nav-item active"><a href="/" class="tm-nav-link">
+                    <li class="tm-nav-item"><a href="/" class="tm-nav-link">
                         <i class="fas fa-home"></i>
                         Blog Home
                     </a></li>
-                    <li class="tm-nav-item"><a href="/sponsor" class="tm-nav-link">
+                    <li class="tm-nav-item active"><a href="/sponsor" class="tm-nav-link">
                         <i class="fab fa-stripe-s"></i>
                         Sponsor
                     </a></li>
@@ -41,7 +42,7 @@
             </nav>
         </div>
     </header>
-	<div class="container-fluid">
+    <div class="container-fluid">
         <main class="tm-main">
             <!-- Search form -->
             <div class="row tm-row">
@@ -55,15 +56,13 @@
                 </div>
             </div>
             <div class="row tm-row">
-                <article>
-					<h1 style="color: #0cc">{{$confe->name}} ( {{$confe->acronym}} )</h1>
-                    <br>
-					<h3>{{$confe->description}}</h3>
-                    <hr>
-					<h3><i class="fas fa-map-marker-alt" style="color: #0cc"></i> {{$confe->local}}</h3>
-                    <hr>
-					<h3><i class="fas fa-calendar-day" style="color: #0cc"></i> {{$confe->conferenceDate}}</h3>
-				</article>
+                @foreach ( $spons as $spon )
+                <article class="col-12 col-md-6 tm-post">
+                    <a href="/sponsors/{{$spon->id}}"><h2>{{$spon->name}}</h2></a>
+                    <p>{{$spon->category}}</p>
+
+                </article>
+                @endforeach
             </div>
             <div class="row tm-row tm-mt-100 tm-mb-75">
                 <div class="tm-prev-next-wrapper">
