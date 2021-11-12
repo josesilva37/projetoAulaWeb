@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Sponsor;
 use Illuminate\Http\Request;
 
 class ControllerSponsor extends Controller
@@ -43,9 +44,9 @@ class ControllerSponsor extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showAll()
     {
-        //
+        return view('sponsor', ['spons' => Sponsor::all()]);
     }
 
     /**

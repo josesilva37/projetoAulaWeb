@@ -46,11 +46,7 @@ Route::get('/profile', function () {
     return view('profile', ['user' => $user]);
 });
 
-Route::get('/sponsor', function () {
-    $spon = Sponsor::all();
-
-    return View::make('sponsor')->with('spons', $spon);
-});
+Route::get('/sponsor', [ControllerSponsor::class, 'showAll']);
 
 Route::get('/createSponsor', [ControllerSponsor::class, 'create']);
 

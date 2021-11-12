@@ -26,7 +26,7 @@
                         Blog Home
                     </a></li>
                     <li class="tm-nav-item"><a href="/sponsor" class="tm-nav-link">
-                        <i class="fab fa-stripe-s"></i>
+                        <i class="fas fa-dollar-sign"></i>
                         Sponsor
                     </a></li>
                     <li class="tm-nav-item"><a href="/writepost" class="tm-nav-link">
