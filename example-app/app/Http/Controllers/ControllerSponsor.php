@@ -50,6 +50,17 @@ class ControllerSponsor extends Controller
     }
 
     /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        return view('sponsorInfo', ['sponsI' => Sponsor::findOrFail($id)]);
+    }
+
+    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id

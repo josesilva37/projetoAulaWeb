@@ -48,6 +48,9 @@ Route::get('/profile', function () {
 
 Route::get('/sponsor', [ControllerSponsor::class, 'showAll']);
 
+
+Route::get('/sponsor/{id}', [ControllerSponsor::class, 'show']);
+
 Route::get('/createSponsor', [ControllerSponsor::class, 'create']);
 
 Route::get('/speakers', [Speakers::class, 'showAll']);
