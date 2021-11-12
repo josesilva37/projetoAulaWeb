@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('sponsors')->insert([
-            'name' => Str::random(10),
+            'name' => $faker->name(),
             'category' => Str::random(10),
         ]);
 
