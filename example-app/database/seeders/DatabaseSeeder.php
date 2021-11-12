@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('speakers')->insert([
-            'name'  => Str::random(10),
+            'name'  => $faker->name(),
             'affiliation' => Str::random(10),
             'biography' => Str::random(30),
             'speakerType' => Str::random(10),

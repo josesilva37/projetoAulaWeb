@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Conference;
 use App\Models\User;
 use App\Http\Controllers\ControllerSponsor;
+use App\Http\Controllers\Speakers;
 use App\Models\Sponsor;
 use GuzzleHttp\Promise\Create;
 
@@ -41,7 +42,6 @@ Route::get('/writepost', function () {
 });
 
 Route::get('/profile', function () {
-
     $user = User::where('id', 1)->first();
     return view('profile', ['user' => $user]);
 });
@@ -50,3 +50,4 @@ Route::get('/sponsor', [ControllerSponsor::class, 'showAll']);
 
 Route::get('/createSponsor', [ControllerSponsor::class, 'create']);
 
+Route::get('/speakers', [Speakers::class, 'showAll']);

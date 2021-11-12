@@ -1,8 +1,3 @@
-{{--
-      @foreach ($confs as $conf)
-      <h1>{{$conf->name}}</h1>
-      @endforeach --}}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +22,7 @@
             </div>
             <nav class="tm-nav" id="tm-nav">
                 <ul>
-                    <li class="tm-nav-item active"><a href="/" class="tm-nav-link">
+                    <li class="tm-nav-item"><a href="/" class="tm-nav-link">
                         <i class="fas fa-home"></i>
                         Blog Home
                     </a></li>
@@ -35,7 +30,7 @@
                         <i class="fas fa-dollar-sign"></i>
                         Sponsor
                     </a></li>
-                    <li class="tm-nav-item"><a href="/speakers" class="tm-nav-link">
+                    <li class="tm-nav-item active"><a href="/speakers" class="tm-nav-link">
                         <i class="fas fa-dollar-sign"></i>
                         Speakers
                     </a></li>
@@ -65,12 +60,9 @@
                 </div>
             </div>
             <div class="row tm-row">
-                @foreach ( $confs as $conf )
-
-
+                @foreach ($speaks as $speaker )
                 <article class="col-12 col-md-6 tm-post">
-                    <a href="/palestras/{{$conf->id}}"><h2>{{$conf->name}}</h2></a>
-                    <p>{{$conf->description}}</p>
+                    <a><h2>{{$speaker->name}}</h2></a>
 
                 </article>
                 @endforeach

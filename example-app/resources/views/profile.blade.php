@@ -29,6 +29,10 @@
                         <i class="fas fa-dollar-sign"></i>
                         Sponsor
                     </a></li>
+                    <li class="tm-nav-item"><a href="/speakers" class="tm-nav-link">
+                        <i class="fas fa-dollar-sign"></i>
+                        Speakers
+                    </a></li>
                     <li class="tm-nav-item"><a href="/writepost" class="tm-nav-link">
                         <i class="fas fa-pen"></i>
                         Write Post
