@@ -3,8 +3,8 @@
             <div class="row tm-row">
                 @foreach ($speaks as $speaker )
                 <article class="col-12 col-md-6 tm-post">
-                    <a><h2>{{$speaker->name}}</h2></a>
-
+                    <a href="/speaker/{{$speaker->id}}"><h2>{{$speaker->name}}</h2></a>
+                    <h4>{{$speaker->biography}}</h4>
                 </article>
                 @endforeach
             </div>
