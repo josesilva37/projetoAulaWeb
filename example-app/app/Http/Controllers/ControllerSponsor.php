@@ -33,7 +33,7 @@ class ControllerSponsor extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
         //
     }
@@ -47,6 +47,17 @@ class ControllerSponsor extends Controller
     public function showAll()
     {
         return view('sponsor', ['spons' => Sponsor::all()]);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        return view('sponsorInfo', ['sponsI' => Sponsor::findOrFail($id)]);
     }
 
     /**
@@ -67,7 +78,7 @@ class ControllerSponsor extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id)
     {
         return view('/');
     }

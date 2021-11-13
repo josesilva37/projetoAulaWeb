@@ -3,9 +3,9 @@
             <div class="row tm-row">
                 @foreach ( $spons as $spon )
                 <article class="col-12 col-md-6 tm-post">
-                    <a href="/sponsors/{{$spon->id}}"><h2>{{$spon->name}}</h2></a>
+                    <a href="/sponsor/{{$spon->id}}"><h2>{{$spon->name}}</h2></a>
                     <p>{{$spon->category}}</p>
-
+                    <p>{{$spon->logo}}</p>
                 </article>
                 @endforeach
             </div>
