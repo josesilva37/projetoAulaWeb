@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Conference;
 use App\Models\User;
 use App\Http\Controllers\ControllerSponsor;
+use App\Http\Controllers\MainController;
 use App\Http\Controllers\Speakers;
 use App\Models\Speaker;
 use App\Models\Sponsor;
@@ -39,10 +40,9 @@ Route::get('/palestras/{id}', function ($id) {
 });
 
 
-Route::get('/profile', function () {
-    $user = User::where('id', 1)->first();
-    return view('profile', ['user' => $user]);
-});
+Route::get('/profile', [MainController::class, 'showLogin']);
+
+
 
 Route::get('/sponsor', [ControllerSponsor::class, 'showAll']);
 
@@ -54,4 +54,7 @@ Route::get('/createSponsor', [ControllerSponsor::class, 'create']);
 Route::get('/speakers', [Speakers::class, 'showAll']);
 
 Route::get('/speaker/{id}', [Speakers::class, 'show']);
+
+
+ Route::post('login', [MainController::class , 'doLogin']);
 
