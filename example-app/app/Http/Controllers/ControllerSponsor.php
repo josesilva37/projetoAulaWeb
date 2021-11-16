@@ -15,6 +15,7 @@ class ControllerSponsor extends Controller
     public function index()
     {
         //
+        return view('sponsor', ['spons' => Sponsor::all()]);
     }
 
     /**
@@ -37,18 +38,6 @@ class ControllerSponsor extends Controller
     {
         //
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function showAll()
-    {
-        return view('sponsor', ['spons' => Sponsor::all()]);
-    }
-
     /**
      * Display the specified resource.
      *
@@ -91,6 +80,8 @@ class ControllerSponsor extends Controller
      */
     public function destroy($id)
     {
-        //
+        Sponsor::destroy($id);
+
+        return redirect('/sponsor')->with('success', 'Sponsor deleted');
     }
 }

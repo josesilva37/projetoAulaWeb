@@ -3,9 +3,14 @@
             <div class="row tm-row">
                 @foreach ( $spons as $spon )
                 <article class="col-12 col-md-6 tm-post">
-                    <a href="/sponsor/{{$spon->id}}"><h2>{{$spon->name}}</h2></a>
-                    <p>{{$spon->category}}</p>
-                    <p>{{$spon->logo}}</p>
+                    <hr class="tm-hr-primary">
+                    <a href="/sponsor/{{$spon->id}}" class="effect-lily tm-post-link tm-pt-60">
+                        <div class="tm-post-link-inner">
+                            <img src="{{$spon->logo}}" alt="Image" class="img-fluid">                            
+                        </div>
+                        <h2 class="tm-pt-30 tm-color-primary tm-post-title">{{$spon->name}}</h2>
+                    </a>                    
+                    <p class="tm-pt-30">{{$spon->category}}</p>
                 </article>
                 @endforeach
             </div>

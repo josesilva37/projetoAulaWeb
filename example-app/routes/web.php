@@ -44,7 +44,7 @@ Route::get('/profile', [MainController::class, 'showLogin']);
 
 
 
-Route::get('/sponsor', [ControllerSponsor::class, 'showAll']);
+Route::get('/sponsor', [ControllerSponsor::class, 'index']);
 
 
 Route::get('/sponsor/{id}', [ControllerSponsor::class, 'show']);
@@ -57,4 +57,5 @@ Route::get('/speaker/{id}', [Speakers::class, 'show']);
 
 
  Route::post('login', [MainController::class , 'doLogin']);
+Route::resource('sponsor', ControllerSponsor::class);
 
