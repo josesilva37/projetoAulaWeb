@@ -44,7 +44,7 @@ Route::get('/profile', function () {
     return view('profile', ['user' => $user]);
 });
 
-Route::get('/sponsor', [ControllerSponsor::class, 'showAll']);
+Route::get('/sponsor', [ControllerSponsor::class, 'index']);
 
 
 Route::get('/sponsor/{id}', [ControllerSponsor::class, 'show']);
@@ -54,4 +54,6 @@ Route::get('/createSponsor', [ControllerSponsor::class, 'create']);
 Route::get('/speakers', [Speakers::class, 'showAll']);
 
 Route::get('/speaker/{id}', [Speakers::class, 'show']);
+
+Route::resource('sponsor', ControllerSponsor::class);
 

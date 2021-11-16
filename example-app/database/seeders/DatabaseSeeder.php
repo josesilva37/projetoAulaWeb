@@ -42,6 +42,7 @@ class DatabaseSeeder extends Seeder
         DB::table('sponsors')->insert([
             'name' => $faker->name(),
             'category' => Str::random(10),
+            'logo' => 'img/Tesla-Logo.png',
         ]);
 
         DB::table('speakar_type')->insert([
