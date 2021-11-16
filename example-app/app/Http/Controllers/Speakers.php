@@ -14,4 +14,8 @@ class Speakers extends Controller
     {
         return view('speakerinfo',['speaks' => Speaker::findOrFail($id)]);
     }
+
+    public function edit($id){
+
+    }
 }
