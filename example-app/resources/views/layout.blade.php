@@ -4,6 +4,7 @@
             <meta charset="UTF-8">
             <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
             <link href="{{ asset('css/templatemo-xtra-blog.css') }}" rel="stylesheet">
+            <link href="{{ asset('css/form.css') }}" rel="stylesheet">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Conference Hub</title>
             <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}"> <!-- https://fontawesome.com/ -->
@@ -68,6 +69,7 @@
                 Copyright 2020 Xtra Blog Company Co. Ltd.
             </div>
         </footer>
+        <script src="{{ asset('js/form.js') }}"></script>
         <script src="js/jquery.min.js"></script>
         <script src="js/templatemo-script.js"></script>
       </body>

@@ -55,7 +55,6 @@ Route::get('/speakers', [Speakers::class, 'showAll']);
 
 Route::get('/speaker/{id}', [Speakers::class, 'show']);
 
+Route::post('login', [MainController::class , 'doLogin']);
 
- Route::post('login', [MainController::class , 'doLogin']);
 Route::resource('sponsor', ControllerSponsor::class);
-

@@ -67,10 +67,15 @@ class ControllerSponsor extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id)
-    {
-        return view('/');
-    }
+    public function updateSpon(Request $request, $id)
+{    
+     $SponEdit = Sponsor::find($id);
+     $SponEdit->name = $request->input('name');
+     $SponEdit->category = $request->input('category');
+     $SponEdit->save();
+
+     return redirect('/sponsor')->with('success', 'Sponsor updated');
+}
 
     /**
      * Remove the specified resource from storage.
