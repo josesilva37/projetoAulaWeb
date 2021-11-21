@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Sponsor;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller as BaseController;
 
-class ControllerSponsor extends Controller
+class ControllerSponsor extends BaseController
 {
     /**
      * Display a listing of the resource.
@@ -34,9 +35,14 @@ class ControllerSponsor extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request $request)
     {
-        //
+        $newSpon = new Sponsor;
+        $newSpon->name = $request->input('name');
+        $newSpon->category = $request->input('category');
+        $newSpon->save();
+
+        return redirect('/sponsor');
     }
     /**
      * Display the specified resource.
@@ -67,11 +73,13 @@ class ControllerSponsor extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function updateSpon(Request $request, $id)
+    public function update(Request $request, $id)
 {    
      $SponEdit = Sponsor::find($id);
      $SponEdit->name = $request->input('name');
      $SponEdit->category = $request->input('category');
+     $SponEdit->logo = "img/Tesla-Logo.png";
+     $SponEdit->isActive = $request->input('active');
      $SponEdit->save();
 
      return redirect('/sponsor')->with('success', 'Sponsor updated');

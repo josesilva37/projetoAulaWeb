@@ -20,7 +20,7 @@
                     <br>
                     <button class="btn-primary" onclick="openForm()" style="border-radius: 10%">Update</button>
                     <div class="form-popup" id="myForm">
-                    <form method="PUT" action="{{route('sponsor.update', $sponsI->id)}}" class="form-container">
+                    <form method="POST" action="{{route('sponsor.update', $sponsI->id)}}" class="form-container">
                         @method('PUT')
                         @csrf
                         <h3>Update Sponsor Info</h3>
