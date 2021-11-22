@@ -36,15 +36,15 @@
                 </div>
                 <nav class="tm-nav" id="tm-nav">
                     <ul>
-                        <li class="tm-nav-item"><a href="/" class="tm-nav-link">
+                        <li class="tm-nav-item {{ request()->is('/') ? 'active' : ''}}"><a href="/" class="tm-nav-link">
                             <i class="fas fa-home"></i>
                             Blog Home
                         </a></li>
-                        <li class="tm-nav-item"><a href="/sponsor" class="tm-nav-link">
+                        <li class="tm-nav-item {{ request()->is('sponsor') ? 'active' : ''}}"><a href="/sponsor" class="tm-nav-link">
                             <i class="fas fa-dollar-sign"></i>
                             Sponsor
                         </a></li>
-                        <li class="tm-nav-item"><a href="/speakers" class="tm-nav-link">
+                        <li class="tm-nav-item {{ request()->is('speakers') ? 'active' : ''}}"><a href="/speakers" class="tm-nav-link">
                             <i class="fas fa-microphone"></i>
                             Speakers
                         </a></li>
